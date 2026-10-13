@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Christian Louboutin</title>
+    <link rel="icon" href="images/louboutin(L).png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            min-height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            width: 100%;
+            max-width: 440px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            padding: 30px 24px;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-header .logo {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .close {
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            color: #000;
+            background: none;
+            border: none;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 24px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 8px;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #f9f9f9;
+            transition: background-color 0.2s ease, padding-left 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #fdfdfd;
+            padding-left: 12px;
+            color: #c8002b;
+        }
+
+        .chevron {
+            font-size: 18px;
+            color: #888;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 16px 0 24px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .links a {
+            color: #333333;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        .accessibility {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="menu-header">
+        <span id="louboutinLogo"><a href="main_page.html">Christian Louboutin</a></span>
+        <a href="main_page.html" class="close" aria-label="Close menu">&times;</a>
+    </div>
+
+    <div class="menu-items">
+        <a href="main_page.html#section3" class="menu-item">
+            <span>Latest Collections</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+
+        <a href="main_page.html#WomenMain" class="menu-item">
+            <span>Women</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+
+        <a href="main_page.html#menMain" class="menu-item">
+            <span>Men</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+
+        <a href="main_page.html#section3" class="menu-item">
+            <span>Bags &amp; Accessories</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+
+        <a href="main_page.html#section3" class="menu-item">
+            <span>Bridal</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+
+        <a href="main_page.html#section5" class="menu-item">
+            <span>The Maison</span>
+            <span class="chevron">&#8250;</span>
+        </a>
+    </div>
+
+    <hr>
+
+    <div class="links">
+        <a href="contactUs.html"><p>Visit a Boutique</p></a>
+        <a href="contactUs.html"><p>Book an Appointment</p></a>
+        <a href="contactUs.html"><p>Contact Us</p></a>
+    </div>
+
+    <div class="united-acessibility">
+        <div class="accessibility">
+            <div class="accesibility-text"><span>Accessibility</span></div>
+        </div>
+        <span>United States ($)</span>
+    </div>
+
+</div>
+
+</body>
+</html>

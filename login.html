@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Sign In - Christian Louboutin</title>
+  <link rel="icon" href="images/louboutin(L).png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .modal-container {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 480px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+      margin: auto;
+    }
+
+    /* Header */
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: clamp(16px, 4vw, 24px) clamp(20px, 5vw, 32px);
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .modal-header h2 {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .close-btn {
+      background: none;
+      border: 1px solid #111;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: #111;
+      padding: 0;
+      line-height: 1;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .close-btn:hover {
+      background-color: #111;
+      color: #fff;
+    }
+
+    /* Body */
+    .modal-body {
+      padding: clamp(20px, 5vw, 32px);
+    }
+
+    .intro-text {
+      font-size: 14px;
+      color: #111111;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .required-text {
+      text-align: right;
+      font-size: 12px;
+      color: #666666;
+      margin-bottom: 20px;
+    }
+
+    /* Form Inputs */
+    .form-group {
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .form-control {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #111111;
+      padding: 8px 0;
+      font-size: 14px;
+      color: #111111;
+      outline: none;
+      background: transparent;
+      border-radius: 0;
+    }
+
+    .form-control::placeholder {
+      color: #777777;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 0;
+      bottom: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .toggle-password svg {
+      width: 20px;
+      height: 20px;
+      stroke: #111111;
+    }
+
+    .forgot-password {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      color: #111111;
+      text-decoration: underline;
+      margin-top: -8px;
+      margin-bottom: 28px;
+    }
+
+    /* Buttons */
+    .btn {
+      width: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #333333;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 28px 0;
+    }
+
+    /* Account Signup Section */
+    .signup-section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 10px;
+    }
+
+    .signup-section p {
+      font-size: 13px;
+      color: #444444;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .btn-secondary {
+      width: 100%;
+      background-color: transparent;
+      color: #111111;
+      border: 1px solid #111111;
+      border-radius: 30px;
+      padding: 14px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-secondary:hover {
+      background-color: #111111;
+      color: #ffffff;
+    }
+
+    .guest-wishlist {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+
+    .guest-wishlist a {
+      text-decoration: underline;
+      color: #555555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="modal-container">
+    <!-- Header -->
+    <div class="modal-header">
+      <h2>My Account</h2>
+      <a href="main_page.html" class="close-btn" aria-label="Close">✕</a>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+      <p class="intro-text">If you have an account with us, log in using your email address.</p>
+      
+      <div class="required-text">* Required fields</div>
+
+      <form action="#" method="post">
+        <div class="form-group">
+          <input 
+            type="email" 
+            class="form-control" 
+            placeholder="Email (ex: name@example.com)*" 
+            required
+          >
+        </div>
+
+        <div class="form-group password-wrapper">
+          <input 
+            type="password" 
+            class="form-control" 
+            placeholder="Password*" 
+            required
+          >
+          <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </button>
+        </div>
+
+        <a href="#" class="forgot-password">Forgot your password?</a>
+
+        <button type="submit" class="btn">SIGN IN</button>
+      </form>
+
+      <hr class="divider">
+
+      <div class="signup-section">
+        <h3>Don't have an account?</h3>
+        <p>Create an account in order to pay faster, save multiple shipping addresses, view and track your orders, and more!</p>
+        <button type="button" class="btn btn-secondary">CREATE AN ACCOUNT</button>
+      </div>
+
+      <div class="guest-wishlist">
+        <a href="wishlist.html">Access my wishlist as a guest</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

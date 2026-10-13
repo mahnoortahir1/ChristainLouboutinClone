@@ -1,0 +1,499 @@
+/* ============================================================
+   CHRISTIAN LOUBOUTIN - CONTACT US STYLES (RESPONSIVE & FLUID)
+   ============================================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+div, section, header, footer, nav, form, ul, li, figure {
+  max-width: 100%;
+}
+
+:root {
+  --brand-red: #c8002b;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Header ---------- */
+.nav, header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.nav-left, .header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  min-width: 0;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 18px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background-color: #000;
+}
+
+#louboutinLogo img {
+  width: clamp(75px, 19vw, 170px);
+  height: auto;
+}
+
+.header-logo {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(18px, 4vw, 26px);
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav-right, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.nav-right a, .header-right a {
+  color: #000;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-right a:hover, .header-right a:hover {
+  opacity: 0.6;
+}
+
+/* ---------- Page Title Banner ---------- */
+.page-title-banner {
+  background-color: var(--brand-red);
+  color: #ffffff;
+  text-align: center;
+  padding: clamp(25px, 5vw, 40px) 15px;
+  width: 100%;
+}
+
+.page-title-banner h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Main Contact Container ---------- */
+.contact-container {
+  width: 100%;
+  max-width: 900px;
+  margin: clamp(25px, 5vw, 50px) auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.contact-intro {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+  color: #111;
+}
+
+.contact-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.contact-card {
+  border: 1px solid #e0e0e0;
+  padding: clamp(20px, 4vw, 36px) clamp(16px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  min-width: 0;
+}
+
+.contact-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-action-btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.card-action-btn:hover {
+  background-color: #333333;
+}
+
+/* ---------- Contact Form Section ---------- */
+.form-section {
+  background-color: #f9f9f9;
+  padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 32px);
+  border: 1px solid #eee;
+  margin-bottom: 45px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-section h2 {
+  font-size: clamp(18px, 3vw, 22px);
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-family: 'Georgia', serif;
+}
+
+.form-section p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.required-note {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  min-width: 0;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #000;
+}
+
+.phone-input-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.phone-prefix {
+  width: 70px;
+  flex-shrink: 0;
+}
+
+.phone-input-group input[type="tel"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  max-width: 220px;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* ---------- Additional Contacts Section ---------- */
+.additional-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 35px;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.additional-contacts h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.additional-contacts p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.additional-contacts a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+/* ---------- Footer Navigation ---------- */
+footer {
+  background-color: #ffffff;
+  padding: 40px 20px 24px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.united-acessibility {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 0.85rem;
+    color: #555555;
+    flex-wrap: wrap;
+}
+
+.accessibility {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bi-toggle-off {
+    height: 1.5rem;
+    color: #76a4a5;
+    vertical-align: middle;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.separate-logos a {
+    color: #000000;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+}
+
+.separate-logos a:hover {
+    opacity: 0.6;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 2rem;
+}
+
+.footer img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 16px;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .contact-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .additional-contacts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .submit-btn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer-logos {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Christian Louboutin</title>
+    <link rel="icon" href="images/louboutin(L).png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.5);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: clamp(16px, 4vw, 40px);
+            cursor: pointer; /* Hints to user that clicking outside closes the overlay */
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .search-popup {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: clamp(20px, 4vw, 36px);
+            border-radius: 4px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            margin-top: clamp(20px, 5vh, 60px);
+            cursor: default; /* Stops cursor pointer inheritance inside modal */
+            animation: fadeInDown 0.25s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .header h2 {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            color: #111;
+            transition: opacity 0.2s;
+        }
+
+        .close-btn:hover {
+            opacity: 0.6;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 16px 0 24px;
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .search-box label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #111;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 10px 0;
+            font-size: 16px;
+            outline: none;
+            background: transparent;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px;
+            color: #111;
+        }
+
+        .popular-searches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .popular-title {
+            width: 100%;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 6px;
+        }
+
+        .chip-btn {
+            background-color: #f2f2f2;
+            border: 1px solid #e5e5e5;
+            padding: 8px 16px;
+            font-size: 13px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #111;
+        }
+
+        .chip-btn:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-popup" id="searchPopup">
+
+    <!-- Header -->
+    <div class="header">
+        <h2>SEARCH</h2>
+        <a href="main_page.html" class="close-btn" aria-label="Close search">&times;</a>
+    </div>
+
+    <hr>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <label for="search">Search by keyword</label>
+        <div class="input-group">
+            <input type="text" id="search" name="search" class="search-input" placeholder="e.g. Kate, Pigalle, Sneakers..." autofocus>
+            <button type="button" class="search-btn" aria-label="Search">&#128269;</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Popular Searches -->
+    <div class="popular-searches">
+        <div class="popular-title">Popular Searches</div>
+        <button type="button" class="chip-btn">Heels</button>
+        <button type="button" class="chip-btn">Sneakers</button>
+        <button type="button" class="chip-btn">Boots</button>
+        <button type="button" class="chip-btn">Kate</button>
+        <button type="button" class="chip-btn">Bags</button>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('search');
+        const searchPopup = document.getElementById('searchPopup');
+        const chipButtons = document.querySelectorAll('.chip-btn');
+
+        // Focus search input on load
+        if (searchInput) searchInput.focus();
+
+        // Populate search input when clicking on popular search chips
+        chipButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                searchInput.value = this.textContent.trim();
+                searchInput.focus();
+            });
+        });
+
+        // Redirect back to main page function
+        function closeOverlay() {
+            window.location.href = 'main_page.html';
+        }
+
+        // Close on backdrop (outside modal panel) click
+        document.body.addEventListener('click', function (e) {
+            if (!searchPopup.contains(e.target)) {
+                closeOverlay();
+            }
+        });
+
+        // Close when pressing the Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeOverlay();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
