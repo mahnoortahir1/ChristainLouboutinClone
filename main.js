@@ -248,8 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ? '<i class="bi bi-volume-mute"></i>'
                 : '<i class="bi bi-volume-up"></i>';
         });
-    }
-});
+    };
 
 // ----------------------------------------------------------------------
 // 4. Shopping Bag / Cart Overlay Drawer
