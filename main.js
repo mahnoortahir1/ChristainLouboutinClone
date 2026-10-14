@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 <button type="button" class="mo-close" aria-label="Close menu">&times;</button>
             </div>
             <div class="mo-items">
-                <a href="main_page.html#section3" class="mo-item"><span>Latest Collections</span><span class="mo-chevron">&#8250;</span></a>
-                <a href="main_page.html#WomenMain" class="mo-item"><span>Women</span><span class="mo-chevron">&#8250;</span></a>
-                <a href="main_page.html#menMain" class="mo-item"><span>Men</span><span class="mo-chevron">&#8250;</span></a>
-                <a href="main_page.html#section3" class="mo-item"><span>Bags &amp; Accessories</span><span class="mo-chevron">&#8250;</span></a>
-                <a href="main_page.html#section3" class="mo-item"><span>Bridal</span><span class="mo-chevron">&#8250;</span></a>
-                <a href="main_page.html#section5" class="mo-item"><span>The Maison</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#section3" class="mo-item"><span>Latest Collections</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#WomenMain" class="mo-item"><span>Women</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#menMain" class="mo-item"><span>Men</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#section3" class="mo-item"><span>Bags &amp; Accessories</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#section3" class="mo-item"><span>Bridal</span><span class="mo-chevron">&#8250;</span></a>
+                <a href="index.html#section5" class="mo-item"><span>The Maison</span><span class="mo-chevron">&#8250;</span></a>
             </div>
             <hr class="mo-hr">
             <div class="mo-links">
@@ -473,4 +473,4 @@ if (cartTrigger) {
         });
     });
 }
-});
+});
